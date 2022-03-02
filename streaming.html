@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Worship | Stream</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    
+    <style>
+        
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Oswald', sans-serif;
+            color:#fff;
+            background:#111;
+            min-height:100vh;
+            color:#fff;
+        }
+        #back-btn{
+            width:50px;
+            height:50px;
+            position:absolute;
+            top:0;
+            left:0;
+            /* background:#555; */
+            font-weight: 800;
+            font-size:30px;
+            line-height: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #back-btn svg{
+            fill:#444;
+            transition: fill .1s;
+            cursor: pointer;
+        }
+        #back-btn svg:hover{
+            fill:#777;
+
+        }
+        #wrapper{
+            width:70%;
+            height:80vh;
+            padding-top:60px;
+            overflow: hidden;
+            margin:auto;
+            display:flex;
+            /* padding-top:90px; */
+            background:#111;
+        }
+        .grid{
+            height:100%;
+            padding:0 10px;
+        }
+        #left-grid{
+            flex:1;
+            background:#111;
+        }
+        #right-grid{
+            flex:2;
+            height:100%;
+            overflow:auto;
+            background:#111;
+        }
+        #right-grid::-webkit-scrollbar{
+            /* width:30px; */
+            width:auto
+        }
+        #right-grid::-webkit-scrollbar-track{
+            background:#000;
+        }
+        #right-grid::-webkit-scrollbar-thumb{
+            background:#666;
+        }
+        #album-art{
+            height:250px;
+            width:100%;
+            background:#000;
+            border-radius: 5px;
+        }
+        #album-art img{
+            height:100%;
+            width:100%;
+            object-fit: contain;
+            object-position: center;
+            border-radius:3px;
+            position:sticky;
+            top:0;
+        }
+        #album-name{
+             margin-bottom: 0!important;
+        }
+        #album-artist{
+             margin-top: 5px;
+        }
+     
+        .audio-block{
+            height:60px;
+            width:100%;
+            /* background:#333; */
+            border-top:1px #777 solid;
+            margin: 5px 0;
+            display: flex;
+            transition: background .1s;
+            border-radius:3px;
+        }
+        .audio-block:hover{
+            background:#444;
+            border-color:#444;
+        }
+        .audio-block-left{
+            height: 100%;
+            flex:5%;
+            /* background:#888; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .audio-block-middle{
+            height: 100%;
+            flex:30%;
+            /* background:#666; */
+            display:flex;
+            align-items: center;
+            padding:0 10px;
+            font-size:80%;
+            font-weight:bold;
+        }
+        .audio-block-right{
+            height: 100%;
+            flex:65%;
+            /* background:#777; */
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right:5px;
+        }
+        audio{
+            width:100%;
+            background:transparent;
+        }
+        *:focus{
+        outline: none !important;
+        transition: none!important;
+        transform: none!important;
+        box-shadow: none!important;
+        border: none;
+        }
+        #store-box{
+            height:50px;
+            width:100%;
+            background:#000;
+            position: absolute;
+            bottom:0;
+            left:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #buy-now-btn{
+            height:70%;
+            width:90px;
+            border-radius: 3px;
+            padding:3px;
+            background:deeppink;
+            font-weight:800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition-property: filter;
+            transition-duration: 1s 1s;
+            border:2px rgb(141, 10, 80) solid;
+            
+        }
+       a{
+            color:#fff;
+            text-decoration: none;
+        }
+        #buy-now-btn:hover{
+            filter:brightness(80%);
+        }
+    </style>
+ 
+   <div id="back-btn" onclick="goBack()">
+       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.5 8.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+      </svg>
+   </div>
+
+     <div id="wrapper">
+        <div class="grid" id="left-grid">
+             <div id="album-art">
+                   <img id="art" src="loader.gif" alt="">
+             </div>
+        </div>
+
+        <div class="grid" id="right-grid">
+               <h2 id="album-name" >Album Name</h2>
+               <h4 id="album-artist">Active Worship</h4>
+
+               <!-- <small id="description">
+                   <i>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, nemo non sapiente ut commodi eaque alias fuga libero, minus reiciendis rem exercitationem quo praesentium maxime aliquid magni. Quae, unde eos!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, nemo non sapiente ut commodi eaque alias fuga libero, minus reiciendis rem exercitationem quo praesentium maxime aliquid magni. Quae, unde eos!
+                    </i>
+                    <br>
+               </small> -->
+               <br>
+
+               <div id="track-container">
+
+             </div>
+        </div>
+        
+     </div>
+
+     <div id="store-box">
+          <a href="" target="_blank" id="buy-now-btn">
+                   Buy Now
+          </a>
+     </div> 
+
+     <script>
+            function goBack() {
+                    window.history.back();
+            }
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('album');
+            const albumName = urlParams.get('name');
+            let albumBox = document.getElementById('album-name');
+                albumBox.innerText = albumName;
+            const url = urlParams.get('url');
+                // alert(url)
+            let BuyNowLink = document.getElementById('buy-now-btn');
+                BuyNowLink.setAttribute('href',url);
+
+            $.ajax({
+                url:'getAlbum.php',
+                data:{album:myParam},
+                method:'post',
+                success:function(data){
+                //    console.log(data)
+                   let track_container = document.querySelector('#track-container');
+                       track_container.innerHTML = data; 
+                }
+            })
+
+            $.ajax({
+                url:'getAlbumArt.php',
+                data:{album:myParam},
+                method:'post',
+                success:function(data){
+                   let resonse = JSON.parse(data);
+                   let thumbnail = resonse[Object.keys(resonse)[0]];
+                   let img = document.getElementById('art');
+                       img.setAttribute('src',`stream/${myParam}/album_art/${thumbnail}`)
+                }
+            })
+
+     </script>
+
+</body>
+</html>

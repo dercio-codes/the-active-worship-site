@@ -1,0 +1,261 @@
+body{
+	background: #000 url('../img/background4.jpg') center fixed;
+	background-size: cover;
+  color: #fff;
+}
+.backgroundimg {
+  background: #000 url('../img/background5.png') center fixed;
+  background-size: cover;
+  background-color: transparent;
+}
+.music {
+  /*background: #000 url('../img/background/background3.jpg') center;*/
+  background: #000;
+  color: #fff;
+}
+.comingsoon {
+  background: #000 url('../img/background/background3.jpg') center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contactsect {
+  background: #000 url('../img/brickwall.jpg') center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+
+.team {
+  background: #000;
+  background-size: contain;
+  color: #fff;
+}
+.teamsect h3{
+  text-transform: uppercase;
+}
+.vid-list .row{
+	margin-bottom: 10px;
+	border-bottom: 1px solid #333;
+	background-color: #fff;
+	padding: 3px;
+}
+.vid-list .row>.col-md-6{
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	color: #333;
+}
+.vid-list .row:last-child{
+	border-bottom: 0px;
+}
+.footer{
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: #fff;
+	background-color: #000;
+}
+.footer i{
+	margin-left: 10px;
+	font-size: 2em;
+}
+.footer a{
+  color: #fff;
+}
+.footer  p{
+	margin-top: 20px;
+}
+
+/* new */
+.row.home-text{
+	background-color: transparent;
+	color: #fff;
+	margin-top: 0.2%;
+	margin-bottom: 5%;
+}
+.home-text h1{
+	font-size: 60px;
+}
+
+/* Grey scale */
+img:hover {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .5s ease-in-out;
+} 
+
+img {
+
+}
+
+a:hover {
+  color:#000;
+}
+ 
+
+a:hover, a:focus {
+  color: #fff;
+  }
+li:hover {
+  color:#fc3554;
+  display: inline
+}
+
+.hover-over{
+	font-weight: bolder;
+	font-size: 1.3em;
+	/*cursor: pointer;*/
+}
+.hover-over a li {
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+.hover div img{
+  border: 2px solid #fff;
+}
+
+.cd-section>div{
+  margin-top: 20px;
+}
+.cd-section  img{
+  border: 1px solid #404040;
+}
+/*-- Contact starts here --*/
+
+.contact .center{
+  margin-top: 80px;
+  
+}
+.contact form input{
+  height: 50px;
+  margin-top: 3px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  color: #888;
+  width: 100%;
+}
+.contact form input[type="submit"]{
+  background-color: #fc3554;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+}
+.contact textarea{
+  width: 100%;
+  margin-top: 3px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  color: #444;
+}
+
+.contact form{
+  float: right;
+  padding: 5px;
+  background: black;
+  color: #f1f1f1;
+}
+
+.contact form h2{
+  color: white;
+}
+a {
+    font-size: 20px;
+    color: #fc3554;
+  }
+  .col-lg-4 iframe{
+    border: solid;
+  }
+ ul#example {
+      list-style: none;
+      padding: 0;
+      display: inline;
+      text-align: center;
+    }
+
+    ul#example li { display: inline-block; }
+
+    ul#example li span {
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 80px;
+      color: #fc3554;
+    }
+
+    ul#example li.seperator {
+      font-size: 30px;
+      line-height: 40px;
+    }
+ 
+  .navbar .dropdown-menu li a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+  .navbar-nav li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.nav li a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+
+/* musicRevealer */
+.musicRevealer{
+  min-height: 300px;
+  background-color: #000;
+  margin-bottom: 20px;
+  display: none;
+  transition: 0.2s ease;
+}
+.musicRevealer:target{
+  display: block;
+}
+.spacer{
+  height: 40px;
+}
+.social{
+  text-align: center;
+  position: absolute;
+  padding: 10px;
+  color: #fc3554;
+}
+.social:hover li {
+  color:#fc3554;
+  display: inline;
+}
+
+.homesocial i{
+  margin: 20px;
+}
+h3, h2{
+  color: #fc3554;
+}
+.gif img{
+  width: 100%
+}
+.social_media
+{
+  text-align: center;
+  position: absolute;
+  padding: 10px;
+  color:#fc3554;
+}
+.countdown ul li span p {
+  list-style: none;
+  padding: 5;
+  display: inline;
+  text-align: center;
+  color:#fc3554;
+  font-size: 30px;
+  line-height: 70px;
+}
+.countdown  span ul{
+  color:#e83012;
+  font-size: 20px;
+}

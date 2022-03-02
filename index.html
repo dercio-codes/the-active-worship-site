@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/behaviour.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type = "text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
+  <title>Active Worship | HOME</title>
+</head>
+<body>
+
+
+ <div class="preloader">
+
+       <div class="loadingtxt">
+
+       </div>
+
+ </div>
+
+<style type="text/css">
+    body{
+      transition: background-color .5s;
+    }
+    video{
+        width: 100%;
+        filter: brightness(40%);
+        object-fit: cover;
+    }
+    #vidDiv{
+       overflow: hidden;
+    }
+    #about .Txt{
+       font-size: 120%;
+       margin-bottom: 30px;
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    html{
+        scroll-behavior: smooth;
+     }
+
+</style>
+
+<div id="black_strip"></div>
+
+    <div id="main">
+      <span id="burger" >&#9776;</span>
+
+
+
+      <div id = "tabs" class="tabs" >
+        <div class="link"><a href="#home">            HOME           </a></div>
+        <div class="link"><a href="#about">           ABOUT          </a></div>
+        <div class="link"><a href="https://activeworship.rapidtrade.com/">               STORE           </a></div>
+        <div class="link"><a href="Music.html">       MUSIC          </a></div>
+        <div class="link"><a href="channels.html">                CHANNELS       </a></div>
+        <div class="link"><a href="redeem.php">                REDEEM CODE    </a></div>
+        <div class="link"><a href="contact us.php">                CONTACT US     </a></div>
+    </div>
+   <!-- SIDE NAV CODE BELOW -->
+    <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" >&times;</a>
+     <a class="delay-1s" href="#home">             HOME           </a>
+     <a class="delay-1s" href="#about">            ABOUT          </a>
+     <a class="delay-1s" href="https://activeworship.rapidtrade.com/">         STORE          </a>
+     <a class="delay-1s" href="Music.html">        MUSIC          </a>
+     <a class="delay-1s" href="channels.html">     CHANNELS       </a>
+     <a class="delay-1s" href="redeem.php">       REDEEM CODE    </a>
+     <a class="delay-1s" href="contact us.php">   CONTACT US     </a>
+
+   </div>
+     <!-- SIDE NAV CODE END -->
+
+<div id="vidDiv" style="width: 100% ">
+      <video height="100%"  autoplay loop muted>
+         <source src="ReActive & AW 2.mp4" type="video/mp4">
+          <source src="ReActive & AW 2.ogg" type="video/ogg">
+          video not supported on browser
+    </video>
+</div>
+
+
+<div style="height: 100vh !important;" class="banner myheights" id="home">
+  <span id="logo"><a href="#"><img src="pics/logo.png"></a></span>
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"  class="boldText welcome_text"><!-- Welcome to <br> -->Active Worship</div>
+
+
+</div>
+
+
+<div class="myheights" id="about">
+ <div class="globalWidth">
+        <p data-aos="fade-up" data-aos-duration="2000" class="theHead">About us</p>
+        <p data-aos="fade-up" data-aos-duration="2000" class="Txt">
+        Active Worship is a unique band with a dynamic sound and crazy creativity. The team comprises largely of members who have never had any formal music training as they come from disadvantaged backgrounds. Active Worship comes out of the life of The Active Church which ministers mainly in the lower economic areas of Central and Southern Jhb.</p>
+
+       <p data-aos="fade-up" data-aos-duration="2000" class="Txt">The team has been raised up through teaching young people the art of playing various instruments and members are brought to proficiency using a mentoring approach. The team is an example of how people can be restored from brokenness to the fullness of creativity when love and time are applied to them.
+       All our songs have been written, produced, performed, recorded and pre-mastered by the members of the team.
+      </p >
+
+      <p data-aos="fade-up" data-aos-duration="2000" class="Txt">
+       The music style is genius as there is a mix of contemporary genres like electro, house, funk, rock and African music which are really good to listen to and even better to praise and worship to! The Active Worship band are multi racial and such a great example of what can happen when we all come together!
+     </p>
+        <!--  <p><a class="btn btn-default btn-primary leadersbutton" href="#leaders">Our Leaders</a></p>
+-->
+ </div>
+
+</div>
+
+    </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript">
+      // document.getElementsByTagName('video').play();
+      AOS.init();
+
+</script>
+
+
+</body>
+</html>

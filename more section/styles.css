@@ -1,0 +1,125 @@
+body {
+  width:100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color:#111 !important; */
+}
+body,html{
+  background: rgb(10, 10, 10) !important;
+  }
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.grid__item-link {
+	display: inline-block;
+	color: currentColor;
+	font-weight: 700;
+	font-size: 14px;
+	/* margin-top:-250px; */
+	position: relative;
+	top:10px;
+	padding: 0 0 0.2rem;
+	pointer-events: auto;
+}
+.grid__item-link::before {
+	content: '';
+	position: absolute;
+	background: currentColor;
+	width: 80%;
+	height: 1px;
+	bottom: 0;
+	transform-origin: 0% 50%;
+	transform: scale3d(0,1,1);
+	opacity: 0;
+	transition: all 0.3s;
+	transition-property: opacity, transform;
+}
+
+.grid__item-link:hover::before {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+}
+.grid__item:hover .grid__item-subtitle .grid__item-link {
+  transition-delay: 0s;
+}
+.swiper-container {
+  width: 100%;
+  height: 90vh;
+  transition: opacity .6s ease;
+}
+.swiper-container.swiper-container-coverflow {
+  padding-top: 2%;
+}
+.swiper-slide {
+  background-position: bottom;
+  background-size: cover;
+  height: 60vh !important;
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+}
+.swiper-slide .content {
+  position: absolute;
+  /* top: 40%; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  left: 0;
+  width: 40%;
+  padding-left: 5%;
+  height: 100%;
+  color: #fff;
+  background-color:rgba(17,17,17,.85);
+}
+.swiper-slide .content .title {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.slide1 {
+  background-image: url("../img/situation.jpg");
+  background-position: top;
+  background-size: cover;
+
+}
+.slide2 {
+  background-image: url("../img/IDK.jpg");
+  background-position: center;
+  background-size: contain;
+}
+.slide3 {
+  background-image: url("../img/AUUB.jpg");
+  background-position: center;
+  background-size: contain;
+}
+.swiper-slide::after {
+  content:"";
+  background-image: inherit;
+  background-position: bottom;
+  background-size: cover;
+  transform:  scaleY(-1);
+  width: inherit;
+  height:40%;
+  position: absolute;
+  bottom: -41%;
+  opacity: 1;
+}
+.swiper-slide::before {
+  z-index: 1;
+  content:"";
+  width: inherit;
+  height:42%;
+  position: absolute;
+  bottom: -42%;
+  background: linear-gradient(to bottom, rgba(36, 32, 32, 0.5), rgb(10, 10, 10));
+
+}

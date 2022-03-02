@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'NEON LIGHTS';
+  src: url('../fonts/NEON LIGHTS.ttf');
+}
+.content_box{
+  margin-top: 8%;
+  background-color: rgba(0,0,0,0.8);
+}
+.top_name{
+  font-size: 120px;
+}
+h1,h2,h3{
+  text-align: center;
+}
+ul#example {
+      list-style: none;
+      padding: 0;
+      display: block;
+      text-align: center;
+    }
+     
+    ul#example li { display: inline-block; }
+     
+    ul#example li span {
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 80px;
+      /*color: #fff;*/
+    }
+     
+    ul#example li.seperator {
+      font-size: 30px;
+      line-height: 70px;
+    }
+     
+    ul#example li p {
+      /*color: #a7abb1;*/
+      font-size: 25px;
+    }
+/*.blue{
+  color: #3063b2;
+}
+.red{
+  color: #ee1a41;
+}
+.yellow{
+  color: #ffff00;
+}
+.green{
+  color: #54b94a;
+}
+.purple{
+  color: #d54398;
+}*/
+.jesus_text{
+  width: 300px;
+}
+.content_box{
+  text-align: center;
+}

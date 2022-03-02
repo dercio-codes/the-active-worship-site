@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/behaviour.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="stylesheet" type = "text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
+  <title>Active Worship | CHANNLES</title>
+</head>
+<body>
+
+  <style type="text/css">
+
+
+
+         .banner{
+          background:red;
+           position: relative;
+           height: 100vh;
+        }
+
+
+            .caro_holder{
+               height: 200px;
+               width: 50%;
+               background:black;
+               position: absolute;
+               right: 0;
+               bottom: 0;
+            }
+body {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.line{
+  height: 2px;
+  width: 100%;
+  background:rgb(255, 230, 0);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.swiper-container {
+    width: 100%;
+    height: 85vh;
+    margin-top: 75px;
+    /* background-color: yellow; */
+    transition: opacity .6s ease;
+}
+.swiper-container.swiper-container-coverflow {
+  padding-top: 2%;
+}
+.swiper-slide {
+  height: 50vh !important;
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+}
+.swiper-slide .content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 40%;
+  padding-left: 5%;
+  color: #fff;
+}
+.info{
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: -105px;
+}
+.info h3{
+  margin-top: 0px;
+}
+.swiper-slide .content .title {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media(max-width: 900px){
+ h2,h3{
+    font-size:80%;
+ }
+
+}
+
+.swiper-slide{
+  /*background-image: url("img1.jpg");*/
+  background-color: #000 !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.maskLeft,.maskRight,.maskTop{
+  /* background-color: cadetblue; */
+  position: absolute;
+  z-index: 2;
+}
+.maskLeft{
+  height: 80%;
+  width:35%;
+  left: 0;
+  top: 0;
+}
+.maskRight{
+  height: 80%;
+  width:35%;
+  right: 0;
+  top: 0;
+}
+/* .maskTop{
+  height: 30%;
+  width:100%;
+  right: 0;
+  left: 0;
+  bottom:0;
+  margin: auto;
+} */
+.boom_mask{
+  /* background-color: purple; */
+  height: 30%;
+  width:100%;
+  position: absolute;
+  z-index: 2;
+  top:0px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+@media(max-width:900px){
+  .boom_mask,.maskTop,.maskRight,.maskLeft{
+     display: none;
+  }
+}
+element.style {
+    width: 608px;
+    margin-right: 20px;
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
+    z-index: 1;
+}
+
+.swiper-slide::before {
+  z-index: 1;
+  content:" ";
+  width: inherit;
+  height:3%;
+  position: absolute;
+  bottom: -35%;
+  background: linear-gradient(to bottom, rgba(5, 5,5, 0.5), #111);
+}
+
+
+ </style>
+
+  <span id="burger" >&#9776;</span>
+
+    <div id = "tabs">
+                 <div class="link"><a href="index.html">            HOME           </a></div>
+                 <div class="link"><a href="index.html#about">                ABOUT          </a></div>
+                 <div class="link"><a href="https://activeworship.rapidtrade.com/">                     STORE</a></div>
+                 <!-- <div class="link"><a href="#active_worship">       ACTIVE WORSHIP </a></div> -->
+                 <!-- <div class="link"><a href="#reactive">             REACTIVE       </a></div> -->
+                 <div class="link"><a href="Music.html">                MUSIC       </a></div>
+                 <div class="link"><a href="redeem.php">                     REDEEM CODE    </a></div>
+                 <div class="link"><a href="contact us.php">       CONTACT US     </a></div>
+             </div>
+
+           <!-- SIDE NAV CODE BELOW -->
+           <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" >&times;</a>
+            <a class="delay-1s" href="index.html">             HOME           </a>
+            <a class="delay-1s" href="index.html#about">            ABOUT          </a>
+            <a class="delay-1s" href="https://activeworship.rapidtrade.com/">         STORE          </a>
+            <a class="delay-1s" href="Music.html">        MUSIC          </a>
+            <!-- <a class="delay-1s" href="channels.html">     CHANNELS       </a> -->
+            <a class="delay-1s" href="redeem.php">       REDEEM CODE    </a>
+            <a class="delay-1s" href="contact us.php">   CONTACT US     </a>
+          </div>
+          <!-- SIDE NAV CODE END -->
+
+          <span id="logo"><a href="#"><img src="pics/logo.png"></a></span>
+
+<section class="swiper-container loading">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide ">
+          <div class="mask maskLeft"></div>
+          <div class="mask maskRight"></div>
+          <div class="mask maskTop" ></div>
+          <div class="mask boom_mask"></div>
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WVBkop1OUVY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <div class="info">
+           <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"><h2>Active Worship</h2>
+            <div class="line"></div>
+            <h3>Inception<h3></p>
+        </div>
+        </div>
+
+        <div class="swiper-slide ">
+          <div class="mask maskLeft"></div>
+          <div class="mask maskRight"></div>
+          <div class="mask maskTop" ></div>
+          <div class="mask boom_mask"></div>
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yv53v2D2O5A" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <div class="info">
+           <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"><h2>Active Worship</h2>
+             <div class="line"></div>
+            <h3>Instantaneously<h3></p>
+        </div>
+        </div>
+
+    <div class="swiper-slide ">
+      <div class="mask maskLeft"></div>
+          <div class="mask maskRight"></div>
+          <div class="mask maskTop" ></div>
+          <div class="mask boom_mask"></div>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-Db4-lM7sMA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="info">
+           <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"><h2>Active Worship</h2>
+            <div class="line"></div>
+            <h3>Broken To Pieces<h3></p>
+        </div>
+    </div>
+
+
+ <div class="swiper-slide ">
+  <div class="mask maskLeft"></div>
+  <div class="mask maskRight"></div>
+  <div class="mask maskTop" ></div>
+  <div class="mask boom_mask"></div>
+
+
+       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XVKkag6xR9E" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <div class="info">
+           <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"><h2>ReActive</h2>
+            <div class="line"></div>
+            <h3>Eternity Re-Imagined<h3></p>
+        </div>
+        </div>
+
+   </div>
+
+    <div class="iconpack channels_pics">
+                                        <div class="icon"><a href="https://www.youtube.com/channel/UC2sj_jlpxpaR1lbUKZpirRg" target = "_blank"><img src="pics/youTube icon.png"></a></div>
+                                        <div class="icon"><a href="https://web.facebook.com/ActiveWorship/?_rdc=1&_rdr" target = "_blank"><img src="pics/faceBook icon.png"></a></div>
+                                        <div class="icon"><a href="https://www.instagram.com/activeworship/" target = "_blank"><img src="pics/insta icon.png" ></a></div>
+    </div>
+
+</section>
+
+
+<script src="js/swiper.min.js"></script>
+<script>
+  let sliderSelector = '.swiper-container',
+      options = {
+        loop: true,
+        speed:800,
+        slidesPerView: 2, // or 'auto'
+        spaceBetween: 20,
+        centeredSlides : true,
+        effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+        coverflowEffect: {
+          rotate: 50, // Slide rotate in degrees
+          stretch: 0, // Stretch space between slides (in px)
+          depth: 50, // Depth offset in px (slides translate in Z axis)
+          modifier: 1, // Effect multipler
+          slideShadows : true // Enables slides shadows
+        },
+        grabCursor: true,
+        parallax: true,
+        on: {
+          imagesReady: function(){
+            this.el.classList.remove('loading');
+          }
+        }
+      };
+  let mySwiper = new Swiper(sliderSelector, options);
+  mySwiper.init();
+
+
+</script>
+</body>
+</html>

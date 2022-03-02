@@ -1,0 +1,931 @@
+
+
+       @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+     .preloader{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background-color: #111;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         animation-name: fade;
+         animation-delay: .5s;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+     }
+       @keyframes fade{
+         from{
+           opacity: 1;
+         }
+         to{
+          opacity: 0.8;
+          margin-top: -100vh;
+         }
+     }
+  /*//// SIDE NAV CODE START///// */
+
+  #black_strip{
+    display: none;
+    height:90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #0e0d0d;
+    z-index: 2;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidenav a {
+  padding-top:10px;
+  padding-bottom:10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+#burger{
+      position: fixed;
+      top:20px;
+      right:20px;
+      z-index: 17;
+      font-size:30px;
+      cursor:pointer;
+      color:#fff;
+      display:none;
+     }
+.sidenav .closebtn {
+  position: absolute;
+  top:32px;
+  right:20px;
+  cursor:pointer;
+  font-size: 46px;
+  z-index: 20;
+  text-align: center;
+  width:30px;
+  height:30px;
+  padding:0;
+  margin: 0;
+  line-height: 20px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* ////SIDE NAV END /////// */
+
+     html,body{
+       overflow-x: hidden;
+     }
+     body{
+        padding: 0;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        color: #464646;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+        width: 10px;
+      }
+    ::-webkit-scrollbar-thumb{
+        background:deeppink;
+      }
+    ::-webkit-scrollbar-track{
+        background:#000;
+      }
+    a{
+      text-decoration: none !important;
+      color: #fff;
+    }
+       a:hover {
+               color: #aa9055 ;
+           }
+           .btn{
+               background: #053c5b;
+           }
+           .btn:hover{
+              background: #01182a;
+           }
+           #vidDiv{
+               position: absolute;
+               top: 0;
+               height: 100vh;
+               width: 100%;
+               z-index: -1;
+               background-color: black;
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+           .theHead{
+                font-weight: 700;
+                font-size: 50px;
+           }
+           .theHead-white{
+              color: #fff;
+               font-weight: 700;
+                font-size: 50px;
+                text-shadow: 1px 1px 1px #111;
+           }
+           .smallerHead{
+              font-weight: 700;
+                font-size: 30px;
+                display: block;
+           }
+           .globalWidth{
+               width: 75%;
+               margin: auto;
+               text-align: center;
+             }
+             .myheights{
+                 height: 100vh;
+                 display: flex;
+                 justify-content: center;
+                 flex-wrap: wrap;
+                 align-items: center;
+             }
+             #reactive{
+                 height: 100vh;
+             }
+             .banner{
+              text-shadow: 1px 1px 1px #111;
+             }
+             #home{
+                  display: flex;
+                  align-items: center;
+             }
+             #tabs{
+                 text-shadow: 1px 1px #222;
+                 position: fixed;
+                 top: 0;
+                 width: 100%;
+                 height: 97px;
+                 font-size: 15px;
+                 font-weight: 550;
+                 color: #fff;
+                 align-items: center;
+                 display: flex;
+                 justify-content: center;
+                 z-index: 3;
+             }
+             #tabs a:hover {
+                 color: #aa9055;
+             }
+             #tabs div{
+                margin-left: 15px;
+                margin-right:15px;
+             }
+             #logo a img{
+                 height: 80px;
+                 width: 180px;
+                 position: fixed;
+                 left: 10px;
+                 top: 7px;
+                 z-index: 3;
+                 object-fit: scale-down;
+             }
+             .boldText{
+                font-size: 75px;
+                font-weight: 700;
+                text-align: center;
+                width: 100%;
+                color: #fff;
+             }
+             .welcome_text{
+                font-size: 105px;
+             }
+             #AWbanner  .boldText, #RAbanner  .boldText{
+              margin-top: 200px;
+           }
+        /*///////////////////////////////////////////MUSIC page css////////////////////////////////////////*/
+
+            #musicbanner{
+               background: url("../AW/2019-11-22 18_30_52.993.jpg");
+               width: 100%;
+               height: 100vh;
+               background-repeat: no-repeat;
+               background-position:center;
+               background-size: cover;
+               animation-duration: 4s;
+               animation-fill-mode: forwards;
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               align-items: center
+            }
+             #active_worship img, #reactive img{
+                  width: 690px;
+                  max-height: 390px
+             }
+             #reactive{
+                  background: #000;
+                  color: #fff;
+             }
+             .bandDescrip{
+                 font-size: 90%;
+                 width: 100%;
+                 margin:auto;
+                 text-align: center;
+                 margin-top: 13px;
+                 margin-bottom: 13px;
+             }
+             .seeMoreButton,.listenButton ,.view{
+                color: #fff;
+                font-weight: lighter;
+                letter-spacing: 2px;
+                width: 135px !important;
+                background: #01182a;
+                cursor: pointer;
+                border-color: darkblue;
+            }
+      /*//////////////////////////////Active w0rship page css////////////////////////////////////////*/
+            #AWbanner{
+               background: url("../AW/The AW band.jpg");
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+            }
+            .listenButton:hover{
+                color: #eee;
+            }
+            .bounce{
+                 animation-delay: 2.5s;
+            }
+            .iconpack{
+              display: flex;
+              justify-content: space-between;
+              align-items:center;
+              margin: auto;
+              width: 100px;
+              height: 40px;
+            }
+            .icon img{
+                filter: invert(100%);
+               width: 25px;
+            }
+            .imgBlock{
+                     height: 450px;
+                     background: #111;
+                     display: flex;
+                     flex-wrap: wrap;
+                     overflow: hidden;
+                     border-top:25px ;
+                     border-bottom: 25px;
+                     border-color: black;
+                     border-style: solid;
+            }
+            .imgDiv{
+                   width: 25%;
+                   height: 50%;
+                   transition: background-size;
+                   transition: filter;
+                   transition-duration: .5s;
+            }
+            .imgDiv:hover{
+                       filter: brightness(55%);
+           }
+            .AWimg1{
+                    background:url("../AW/2019-11-22 18_30_52.993(1).jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg2{
+                    background:url("../AW/2019-12-08 17_04_05.6891.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg3{
+                    background:url("../AW/2019-12-08 17_04_59.277.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg4{
+                    background:url("../AW/2019-12-15 18_17_15.479.jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .AWimg5{
+                    background:url("../AW/2019-12-15 19_21_44.543.jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .AWimg6{
+                    background:url("../AW/2019-12-15 18_40_26.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg7{
+                    background:url("../AW/DSC_8574_Original (1).jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg8{
+                    background:url("../AW/DSC_8597_Original (1).jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+
+/*/////////block 2/////////////*/
+            .AWimg9{
+                    background:url("../AW/DSC_8769_Orig.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg10{
+                    background:url("../AW/2019-12-08 17_16_48.1081.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg11{
+                    background:url("../AW/DSC_8687_Original (1).jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .AWimg12{
+                    background:url("../AW/DSC_8753_Original (1).jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .AWimg13{
+                    background:url("../AW/DSC_8763_Original (1).jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .AWimg14{
+                    background:url("../AW/DSC_9407.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg15{
+                    background:url("../AW/DSC_9773.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .AWimg16{
+                    background:url("../AW/DSC_9770.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+             .albumname{
+                opacity: 0;
+             }
+            .newAlbum_and_Links_Wrap{
+                  display: flex;
+                  justify-content: space-between;
+             }
+            .newAlbumPic{
+                  height: 350px;
+                  width: 380px;
+                  background: url("../items/Inception_cover.jpg");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  cursor: pointer;
+            }
+            .AWnewAlbum{
+               background-image: url("../blurd bg Inception_cover.jpg");
+               background-size: cover;
+
+            }
+
+            .linksDiv{
+                  width: 60%;
+                  display: flex;
+                  flex-wrap: wrap;
+            }
+            .linkBox{
+                width: 50%;
+                height: 33%;
+                border:1px #aaa solid;
+                display: flex;
+            }
+            .platform{
+                background:#fff;
+                width:60%;
+                height: 100%;
+            }
+            .platform1{
+                background-image: url("../pics/spotify.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .platform2{
+                background-image: url("../pics/deezer.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .platform3{
+                background-image: url("../pics/itunes.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .platform4{
+                background-image: url("../pics/untitled.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .platform5{
+                background-image: url("../pics/Music.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .platform6{
+                background-image: url("../pics/Apple.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .CTA{
+                background-color: #111;
+                width:40%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #recent_albums{
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            #recent_albums a{
+              font-size: 12px;
+            }
+            /*///////////slder code/////////*/
+ *, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 75vh;
+  transition: opacity .6s ease;
+}
+.swiper-container.swiper-container-coverflow {
+  padding-top: 2%;
+}
+.swiper-slide {
+  background-position: bottom;
+  background-size: cover;
+  height: 50vh !important;
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+}
+.swiper-slide .content .title {
+    line-height: 40px;
+}
+.swiper-slide .content {
+    position: absolute;
+    top: 2%;
+    right: 0;
+    width: 45%;
+    padding-left: 5%;
+    color: #fff;
+}
+.swiper-slide .content .title {
+    font-size: 190%;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.swiper-container .linkBox {
+  height: 46.3%;
+}
+.slide1 {
+  background-image: url("../items/Inception_cover.jpg");
+    background-size:contain;
+  background-position:left;
+  background-repeat: no-repeat;
+}
+.slide2 {
+  background-image: url("../items/As Above So Below.jpg");
+  background-size:contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.slide3 {
+  background-image: url("../items/ablaze_cover.jpg");
+  background-size:contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.swiper-slide::after {
+  content:"";
+  background-image: inherit;
+  background-position: bottom;
+  background-size: cover;
+  transform:  scaleY(-1);
+  width: inherit;
+  height:40%;
+  position: absolute;
+  bottom: -40%;
+  opacity: 0.4;
+}
+.swiper-slide::before {
+    z-index: 1;
+    content: "";
+    width: inherit;
+    height: 40%;
+    position: absolute;
+    bottom: -40%;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.5),#000 );
+}
+.year{
+     font-size: 50%;
+     font-weight: 700;
+     color: #ccc;
+}
+.title{
+    margin-bottom: 5px;
+    display: block;
+}
+.otherTxt{
+      margin-top: 5px;
+      display: none;
+}
+/*///////////////REACTIVE PAGE CSS BELOW//////////////////////////*/
+
+            #RAbanner{
+               background: url("../RA/reactive band.jpg");
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+            }
+            .RAimg1{
+                    background:url("../RA/2019-11-22 19_07_37.833_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg2{
+                    background:url("../RA/2019-11-29 18_52_22.667.JPG");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg3{
+                    background:url("../RA/DSC_9396.jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .RAimg4{
+                    background:url("../RA/DSC_9398.jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .RAimg5{
+                    background:url("../RA/DSC_9399.jpg");
+                    background-size:cover;
+                    background-position: center;
+
+            }
+            .RAimg6{
+                    background:url("../RA/DSC_9488.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg7{
+                    background:url("../RA/2019-11-22 19_09_39.235_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg8{
+                    background:url("../RA/DSC_9470.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+
+/*/////////block 2/////////////*/
+            .RAimg9{
+                    background:url("../RA/DSC_9396.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg10{
+                    background:url("../RA/DSC_9488.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg11{
+                    background:url("../RA/2019-11-22 19_11_00.471_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg12{
+                    background:url("../RA/DSC_9490.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg13{
+                    background:url("../RA/2019-11-22 19_01_22.079_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg14{
+                    background:url("../RA/DSC_9467.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg15{
+                    background:url("../RA/2019-11-22 19_10_03.307_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+            .RAimg16{
+                    background:url("../RA/2019-11-22 19_03_17.587_Original.jpg");
+                    background-size:cover;
+                    background-position: center;
+            }
+           .RAnewAlbum{
+                  background: url("../blurd bg react.jpg");
+                  background-size: cover;
+           }
+            .newAlbumPic2{
+                  height: 350px;
+                  width: 380px;
+                  background: url("../items/react.jpg");
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: contain;
+                  transition: filter;
+                  transition-duration:  .9s;
+                  cursor: pointer;
+            }
+            .newAlbumPic2:hover{
+                 filter: brightness(85%);
+            }
+.RAslide1 {
+  background-image: url("../items/react.jpg");
+    background-size:contain;
+  background-position:left;
+  background-repeat: no-repeat;
+}
+.RAslide2 {
+  background-image: url("../items/Front Cover 1.jpg");
+  background-size:contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+/*/////////////////Contact US CSS code below///////////////*/
+
+     #contact{
+             background: url("../AW/DSC_0378-min.jpg");
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+        }
+     #contactusDiv{
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      }
+      textarea{
+        height: 70px !important;
+      }
+        #contactus{
+            width: 55%;
+            max-width:615px;
+             margin-bottom:-80px;
+             background: rgba(20,20,20, .95);
+             padding: 20px;
+             color: #fff;
+        }
+
+        /*////////////////////REDEEM CODE CODE BELOW/////////////////////////////*/
+     #redeem_wrapper{
+       background:url("../AW/DSC_0326-min.jpg");
+       background-size: cover;
+       background-position: center;
+       height: 100vh;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 5px;
+     }
+       #redeem_form{
+         width: 70%;
+         max-width: 500px;
+         height: 330px;
+         padding: 30px;
+         background: rgba(20,20,20, .95);
+         border-radius: 3px;
+         margin-bottom:-80px;
+       }
+       .labels{
+         font-weight: bold;
+       }
+       .text{
+        text-align: center;
+        color:#fff;
+       }
+       .astro{
+        margin: auto;
+        width: 24%;
+       }
+       .astro img{
+        width: 80px;
+       }
+       .channels_icons{
+        position: absolute;
+        bottom: 10px;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+       .linkBox{
+  border:none;
+}
+@media(max-width: 1200px){
+  .swiper-slide .content {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          padding-left: 5%;
+          color: #fff;
+          text-shadow: 2px 2px 2px #111;
+    }
+}
+
+      @media(max-width: 1050px){
+        #tabs{
+           display: none;
+        }
+        #black_strip{
+          display: block;
+        }
+        #logo a img{
+          width:130px;
+      }
+        .globalWidth{
+           width: 95%;
+        }
+        .myheights{
+          height: 100vh;
+          padding-top: 20px;
+          padding-bottom: 40px;
+        }
+        #burger{
+          display: block;
+        }
+        .swiper-slide .content {
+          right: 0;
+      }
+    }
+    @media(max-width: 830px){
+
+    #RAbanner,#AWbanner,#redeem_wrapper,#contact{
+      /* animation-name: slide; */
+      animation-duration: 25s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+ }
+
+ @keyframes slide{
+      from{
+          background-position: left;
+      }
+      to{
+        background-position: right;
+      }
+ }
+
+ #contactus{
+    width: 70%;
+ }
+
+}
+
+    @media(max-width:810px){
+      .newAlbum_and_Links_Wrap{
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .linksDiv{
+        margin-top:20px;
+        height:350px;
+        width:100%;
+      }
+      .myheights{
+        height: fit-content;
+      }
+      #AWbanner,#RAbanner,#recent_albums,#about{
+        min-height: 100vh !important;
+      }
+      #newAlbum{
+        display: block;
+      }
+    }
+
+    @media(max-width: 700px){
+
+       #musicbanner{
+        height: 150px;
+      }
+        #active_worship img{
+           width: 94%;
+           padding-top: 20px;
+        }
+        #reactive img{
+          width: 94%;
+          padding-top: 20px;
+        }
+        .bandDescrip{
+          text-align: justify;
+          padding: 33px 15px 33px 15px ;
+        }
+        .globalWidth{
+            width: 100%;
+        }
+         .theHead, .theHead-white{
+           font-size: 200%;
+        }
+        .myheights{
+            padding:20px 0px 20px 0px;
+        }
+        #active_worship,#reactive{
+            height:fit-content;
+        }
+        .boldText{
+          font-size: 200%;
+        }
+        .imgDiv{
+            display: none;
+        }
+        .lucky{
+          display: block;
+          width: 50% ;
+        }
+    }
+
+    @media(max-width: 600px){
+      .boldText{
+        font-size: 53px;
+      }
+
+      .swiper-slide .content {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+    .swiper-slide .linksDiv{
+      width:100% !important;
+    }
+ }
+
+    @media(max-width: 500px){
+      #contactus{
+        width: 95%;
+     }
+      .newAlbumBanner{
+        height: 230px;
+      }
+    }

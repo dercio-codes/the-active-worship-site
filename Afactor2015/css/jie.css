@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'worshipfont';
+  src: url('../fonts/alternate-gothic-no2-d.ttf') format('truetype') /* Pretty Modern Browsers */
+ }
+ @font-face {
+  font-family: 'dry';
+  src: url('../fonts/Dry Brush.ttf') format('truetype') /* Pretty Modern Browsers */
+ }
+body{
+    background: #000;
+    font-family: "worshipfont", Verdana, sans-serif;
+    transition: 0.2s ease-in-out;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0px;
+    color: #fff;
+    font-size: 300px;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+}
+.header h2{
+    text-align: center;
+    /*font-weight: bolder;*/
+    margin-top: 10px;
+    color: #fc3554;
+    font-size: 150px;
+    letter-spacing: -1px;
+    font-family: "dry";
+}
+section.header{
+    min-height: 800px;
+    background: url(../img/headerback.jpg) center fixed;
+    background-size: cover;
+}
+.btncontainer{
+    width:100px;
+    height: 100px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin: 20px auto;
+    color: #fff;
+    padding: 30px;
+    font-size: 30px;
+    transition: 0.2s ease-in-out;
+}
+.btncontainer:hover{
+    border-color: #fc3554;
+    color: #fc3554;
+    cursor: pointer;
+}
+section.dots{
+    background: #000 url(../img/background/dots-torn.jpg);
+    background-size: cover;
+}
+
+.trackList{
+    margin-top: 120px;
+}
+.trackList h2{
+    font-family: "worshipfont", Verdana, sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+}
+.trackList a{
+    color: inherit;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    font-weight: bolder;
+}
+.trackList a:hover{
+    text-decoration: none;
+    color: #fc3554;
+}
+.list-group-item{
+    background-color: transparent;
+    font-size: 2em;
+}
+.fullimg img{
+    width: 100%;
+}
+
+.modal-body{
+    padding: 0px;
+}
+.modal-content{
+    background-color: transparent;
+}

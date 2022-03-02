@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'NEON LIGHTS';
+  src: url('../fonts/NEON LIGHTS.ttf');
+}
+.content_box{
+  margin-top: 1%;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+}
+.content_box > .Amplify{
+  width: 20%;
+  margin-bottom: 80px;
+}
+.top_name{
+  font-size: 120px;
+}
+h1,h2,h3{
+  text-align: center;
+}
