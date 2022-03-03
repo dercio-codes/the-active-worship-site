@@ -72,8 +72,9 @@
 
 
         <div id = "tabs" style="background: transparent; ">
+          <img src="C:\Users\Sckalk laptop\Desktop\Active worship\the-active-worship-site\black-and-gray-audio-mixer-3784221.jpg" style="height: 100%; width: 100%;">
                  <div class="link"><a href="index.html">            HOME           </a></div>
-                 <div class="link"><a href="index.html#about">           ABOUT          </a></div>
+                 <div class="link"><a href="index.html#about">           l          </a></div>
                  <div class="link"><a href="shop.html">                STORE           </a></div>
                  <div class="link"><a href="Music.html">       MUSIC          </a></div>
                  <div class="link"><a href="channels.html">                CHANNELS       </a></div>
@@ -150,6 +151,7 @@
     </div>
 
 
+   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
          AOS.init();
